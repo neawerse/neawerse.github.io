@@ -1,0 +1,43 @@
+/* The pre-launch page — the original index.html's styles, unchanged in
+   look; only the class names follow the project's naming. */
+.coming_soon {
+  display: grid;
+  place-items: center;
+  padding: 3rem 1.5rem;
+}
+
+.coming_soon_inner {
+  text-align: center;
+  animation: rise 900ms ease-out both;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(0.75rem); }
+  to { opacity: 1; transform: none; }
+}
+
+.wordmark {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(3.2rem, 14vw, 6rem);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+/* Asterism — the printer's mark for a pause between passages. */
+.asterism {
+  color: var(--brass);
+  font-size: var(--fs-asterism);
+  line-height: 1;
+  margin: 2.25rem 0;
+  user-select: none;
+}
+
+.status {
+  font-size: var(--fs-sm);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}

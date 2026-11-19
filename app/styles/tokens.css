@@ -1,0 +1,29 @@
+/* Design tokens, carried over from the original coming-soon page: ink-dark
+   night with a lamp glow, paper-coloured type, a muted grey and one brass
+   accent. */
+:root {
+  --ink: #0e1219;
+  --lamp: #171d27;
+  --paper: #e9e3d6;
+  --muted: #8b8574;
+  --brass: #c08a3e;
+
+  --display: "Fraunces", Georgia, serif;
+  --body: "Spectral", Georgia, serif;
+
+  /* Divider lines: the muted grey at partial strength. */
+  --rule: color-mix(in srgb, var(--muted) 40%, transparent);
+
+  /* Type scale. Nothing user-facing goes below --fs-xs; headings are fluid
+     (clamp) and sit outside this scale. */
+  --fs-xs: 12px;
+  --fs-sm: 13px;
+  --fs-list: 18px;
+  --fs-reading: 19px;
+  --fs-asterism-break: 20px;
+  --fs-asterism: 1.4rem;
+  --fs-mark: 24px;
+
+  /* Reading measure: about 65-70 characters per line at the body size. */
+  --measure: 36rem;
+}

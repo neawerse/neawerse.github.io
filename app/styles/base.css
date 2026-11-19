@@ -1,0 +1,54 @@
+/* ══ RESET & BASE ══ */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ink);
+  background-image: radial-gradient(60rem 40rem at 50% 38%, var(--lamp) 0%, var(--ink) 70%);
+  background-attachment: fixed;
+  color: var(--paper);
+  font-family: var(--body);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  /* Sticky footer: <main> grows, so short pages pin the footer to the
+     bottom. 100vh first for browsers without dvh support. */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+main { flex: 1; }
+
+a { color: var(--brass); }
+
+/* ══ ACCESSIBILITY ══ */
+/* Off-screen via transform, not display:none — the link must stay
+   focusable. Revealed on :focus for keyboard users. */
+.skip_link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  transform: translateY(-100%);
+  background: var(--paper);
+  color: var(--ink);
+  padding: 0.75rem 1.25rem;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.15s;
+}
+.skip_link:focus { transform: translateY(0); }
+#main_content:focus { outline: none; }
+
+/* One global switch for motion sensitivity. Near-zero rather than 0 so
+   nothing waiting on a transitionend event breaks. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

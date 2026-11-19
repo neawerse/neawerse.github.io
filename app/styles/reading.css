@@ -1,0 +1,156 @@
+/* Full-site layout (dev server until launch): header, book list, chapter
+   list and the reading page. Set for long text: a narrow measure, generous
+   leading, book-style paragraphs. */
+
+/* ══ HEADER & FOOTER ══ */
+.site_header,
+.footer {
+  max-width: var(--measure);
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.site_header_mark {
+  font-family: var(--display);
+  font-size: var(--fs-mark);
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.footer {
+  font-size: var(--fs-sm);
+  letter-spacing: 0.04em;
+}
+
+.footer a { color: var(--muted); text-decoration: none; }
+.footer a:hover { color: var(--brass); }
+
+/* ══ PAGES ══ */
+.page {
+  max-width: var(--measure);
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.page_centered {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.page_title {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(2rem, 7vw, 3rem);
+  line-height: 1.1;
+  margin: 1rem 0;
+}
+
+.page_note {
+  color: var(--muted);
+  margin: 0 0 2rem;
+}
+
+.back_link {
+  font-size: var(--fs-sm);
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  text-decoration: none;
+}
+.back_link:hover { color: var(--brass); }
+
+.draft_badge {
+  margin-left: 0.75rem;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brass);
+}
+
+/* ══ BOOK LIST ══ */
+.book_list,
+.chapter_list {
+  margin: 0;
+  padding: 0;
+}
+
+.book_list { list-style: none; }
+
+.book_list_item { padding: 1.25rem 0; }
+
+.book_list_title {
+  font-family: var(--display);
+  font-size: var(--fs-mark);
+  color: var(--paper);
+  text-decoration: none;
+}
+.book_list_title:hover { color: var(--brass); }
+
+.book_list_summary {
+  color: var(--muted);
+  margin: 0.5rem 0 0;
+}
+
+.chapter_list {
+  padding-left: 1.5rem;
+  font-size: var(--fs-list);
+  line-height: 2;
+}
+
+.chapter_list a { color: var(--paper); text-decoration: none; }
+.chapter_list a:hover { color: var(--brass); }
+
+/* ══ READING ══ */
+.chapter_title {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+  line-height: 1.15;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.chapter_text {
+  font-weight: 400;
+  font-size: var(--fs-reading);
+  line-height: 1.75;
+  hyphens: auto;
+}
+
+/* Book-style paragraphs: no gap between them, the second and later ones
+   indented; the first paragraph after a break starts flush. */
+.chapter_text p { margin: 0; }
+.chapter_text p + p { text-indent: 1.5em; }
+
+.chapter_text em { font-style: italic; }
+.chapter_text strong { font-weight: 600; }
+
+/* A scene break written as "* * *" (<hr>) is drawn as the asterism, the
+   same mark as on the coming-soon page. */
+.chapter_text hr {
+  border: 0;
+  margin: 2rem 0;
+  text-align: center;
+  color: var(--brass);
+}
+.chapter_text hr::after {
+  content: "⁂";
+  font-size: var(--fs-asterism-break);
+}
+
+.chapter_nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 3rem 0 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.chapter_nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.chapter_nav a:hover { color: var(--brass); }

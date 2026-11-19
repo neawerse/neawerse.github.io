@@ -1,0 +1,26 @@
+# Copyright (c) 2026 Sait Kaplan
+
+All Rights Reserved.
+
+This repository and everything in it — including the source code, page
+design and layout, and written content, including every book and chapter
+under app/content/books/ and the characters, places and fictional worlds
+they contain — is the exclusive property of Sait Kaplan, unless
+explicitly stated otherwise.
+
+No permission is granted to copy, reproduce, distribute, publish, modify,
+sublicense, or create derivative works from any part of this repository,
+in whole or in part, for any purpose, without the prior written consent
+of the copyright holder.
+
+The name "Neawe" and any associated branding may not be used without
+permission, independently of and in addition to the copyright
+restrictions above.
+
+Third-party components keep their own licenses: the fonts in app/fonts/
+(Fraunces, Spectral; SIL Open Font License 1.1, license files alongside) and the npm
+packages listed in package.json.
+
+This repository is public so that the site's source and history are
+transparently auditable. Public visibility does not grant any license to
+use, copy, or redistribute its contents.
